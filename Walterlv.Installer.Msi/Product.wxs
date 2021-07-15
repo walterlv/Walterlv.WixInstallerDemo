@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
   <Product Id="*"
            Name="Walterlv.Demo.MainApp"
            Language="1033"
@@ -7,6 +8,12 @@
            Manufacturer="walterlv"
            UpgradeCode="2aeffe1a-8bb6-4b06-b1c0-feca18e17cf7">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
+
+    <PropertyRef Id="WIX_IS_NETFRAMEWORK_462_OR_LATER_INSTALLED"/>
+
+    <Condition Message="This application requires .NET Framework 4.6.2. Please install the .NET Framework then run this installer again.">
+      <![CDATA[WIX_IS_NETFRAMEWORK_462_OR_LATER_INSTALLED]]>
+    </Condition>
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
     <MediaTemplate />
