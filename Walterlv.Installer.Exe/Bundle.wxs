@@ -7,6 +7,7 @@
     <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
 
     <Chain>
+      <PackageGroupRef Id="NetFx462Web"/>
       <MsiPackage Compressed="yes"
                   SourceFile="$(var.Walterlv.Installer.Msi.TargetPath)"/>
     </Chain>
