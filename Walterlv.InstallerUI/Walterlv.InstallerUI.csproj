@@ -7,4 +7,10 @@
     <StartupObject>Walterlv.InstallerUI.Program</StartupObject>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Reference Include="BootstrapperCore">
+      <HintPath>$(WIX)\Sdk\BootstrapperCore.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
